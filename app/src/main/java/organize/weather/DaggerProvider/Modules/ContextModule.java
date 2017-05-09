@@ -1,0 +1,26 @@
+package organize.weather.DaggerProvider.Modules;
+
+import android.content.Context;
+
+import javax.inject.Singleton;
+
+import dagger.Module;
+import dagger.Provides;
+
+/**
+ * @author ZHOURI Zakaria
+ */
+@Module
+public class ContextModule {
+    private Context mContext;
+
+    public ContextModule(Context context) {
+        mContext = context;
+    }
+
+    @Provides
+    @Singleton
+    public Context provideContext() {
+        return mContext;
+    }
+}
